@@ -107,14 +107,14 @@
       $first_right = "";
       $text_title = "";
       $text_body = "";
-
+      $text_date = "";
       $text_image_path = "";
       $text_image_name = "";
       $text_image_source = "";
 
     pseudo-code de la función
 
-    function timeline($data_array, $starting_id, $num_of_posts, $text_title, $text_body, $text_image_source, $text_image_name){
+    function timeline($data_array, $starting_id, $num_of_posts, $text_title, $text_body, $text_image_source, $text_image_name, "$text_date"){
       $image = "<img src=\"" . $text_image_path . $text_image_name . "\" class=\"card-text-image\">"
       $ending_id = $starting_id + $num_of_posts - 1;
       for($count = $starting_id; $count =< $ending_id; $count++){
@@ -132,7 +132,7 @@
               <div $first_right class=\"card $side\">
         <div class=\"card-border\">
           <div class=\"card-date\">
-            <p class=\"card-date-text\">September 2020</p>
+            <p class=\"card-date-text\">$text_date</p>
           </div>
           <div class=\"card-text\">
             <p class=\"card-text-title\">
