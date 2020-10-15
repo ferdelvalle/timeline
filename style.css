@@ -122,10 +122,10 @@ ol, ul {
   border: 2px solid #0ac6e9;
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 
 .card-date {
-  width: 25%;
   background-color: #f33f33;
   border-radius: 3px;
   position: absolute;
@@ -136,7 +136,7 @@ ol, ul {
 .card-date-text {
   color: #fff;
   font-weight: bold;
-  padding: 4px 0;
+  padding: 4px 4px;
   font-size: 14px;
 }
 

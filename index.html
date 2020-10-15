@@ -30,7 +30,7 @@
     </div>
 
     <div id="first-right" class="card right">
-      <div class="card-border">
+      <a href="" class="card-border">
         <div class="card-date">
           <p class="card-date-text">September 2020</p>
         </div>
@@ -43,7 +43,7 @@
           </p>
           <img src="./assets/sample.png" alt="" class="card-text-image">
         </div>
-      </div>
+      </a>
       <div class="card-line-container">
         <div class="card-line">
           <div class="card-line-circle"></div>
@@ -114,7 +114,7 @@
 
     pseudo-code de la función
 
-    function timeline($data_array, $starting_id, $num_of_posts, $text_title, $text_body, $text_image_source, $text_image_name, "$text_date"){
+    function timeline($data_array, $starting_id, $num_of_posts, $text_title, $text_body, $text_image_source, $text_image_name, "$text_date", $article_link){
       $image = "<img src=\"" . $text_image_path . $text_image_name . "\" class=\"card-text-image\">"
       $ending_id = $starting_id + $num_of_posts - 1;
       for($count = $starting_id; $count =< $ending_id; $count++){
@@ -130,7 +130,7 @@
 
         echo "
               <div $first_right class=\"card $side\">
-        <div class=\"card-border\">
+        <a href=\"$article_link" class=\"card-border\">
           <div class=\"card-date\">
             <p class=\"card-date-text\">$text_date</p>
           </div>
@@ -143,7 +143,7 @@
             </p>
             $image
           </div>
-        </div>
+        </a>
         <div class=\"card-line-container\">
           <div class=\"card-line\">
             <div class=\"card-line-circle\"></div>
