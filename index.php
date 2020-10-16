@@ -8,8 +8,10 @@
     return $class;
   }
 
-  function first_even_id($num) {
-    if($num === 2){
+  function first_even_or_odd_id($num) {
+    if($num === 1){
+      $id = 'id="first-odd"';
+    } elseif($num === 2){
       $id = 'id="first-even"';
     } else {
       $id = "";
@@ -18,7 +20,7 @@
   }
 
   function timeline_item($index, $text_title, $text_body, $text_image_src, $text_date){
-    $card_id = first_even_id($index);
+    $card_id = first_even_or_odd_id($index);
     $odd_or_even = odd_even_class($index);
     return '
   <div ' . $card_id . 'class="card ' . $odd_or_even . '">
@@ -41,8 +43,8 @@
   ';
 	}
 	
-	function timeline($timeline_data, $holidayName){
-    $timeline_title= $holidayName . ' timeline';
+	function timeline($timeline_data, $holiday_name){
+    $timeline_title= strtoupper($holiday_name) . ' TIMELINE';
     echo '
     <p class="timeline-title">' . $timeline_title . '</p>
     <div class="main-container">
@@ -52,14 +54,18 @@
       echo $item;
     }
     echo '</div>' . "\n";
-	}
+  }
+  
+  // PARÁMETROS DE MUESTRA
 
   $timeline_data = [
     [1, "President Obama declared a new day on September 11", "With Patriot Day, he also announced September 11 as National Day of Service and Remembrance.", "./assets/sample.png", "September 2020"],
     [2, "President Obama declared a new day on September 11", "With Patriot Day, he also announced September 11 as National Day of Service and Remembrance.", "./assets/sample.png", "September 2020"],
     [3, "President Obama declared a new day on September 11", "With Patriot Day, he also announced September 11 as National Day of Service and Remembrance.", "./assets/sample.png", "September 2020"],
     [4, "President Obama declared a new day on September 11", "With Patriot Day, he also announced September 11 as National Day of Service and Remembrance.", "./assets/sample.png", "September 2020"]
-	];
+  ];
+  
+  $holiday_name = "Taco Day";
 
 ?>
 
@@ -72,6 +78,6 @@
   <title>Timeline</title>
 </head>
 <body>
-  <?php timeline($timeline_data, "taco") ?>
+  <?php timeline($timeline_data, $holiday_name) ?>
 </body>
 </html>

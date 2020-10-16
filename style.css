@@ -33,9 +33,9 @@ div, p, img {
 
 @media screen and (min-width: 768px) {
   .main-container {
-    background: -webkit-gradient(linear, left top, left bottom, from(#bebebef8), to(#bebebef8)) no-repeat center/2px 90%;
-    background: linear-gradient(#bebebef8, #bebebef8) no-repeat center/2px 90%;
-    height: 800px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bebebef8), to(#bebebef8)) no-repeat center/2px 92%;
+    background: linear-gradient(#bebebef8, #bebebef8) no-repeat center/2px 92%;
+    height: 900px;
   }
 }
 
@@ -45,6 +45,7 @@ div, p, img {
   color: #0ac6e9;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -197,7 +198,13 @@ div, p, img {
 /* this is to be solved in PHP */
 @media screen and (min-width: 768px) {
   #first-even {
-    margin-top: 200px;
+    margin-top: 110px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #first-odd {
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
