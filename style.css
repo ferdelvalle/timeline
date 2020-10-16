@@ -14,7 +14,6 @@ div, p, img {
 .main-container {
   width: 100%;
   padding: 0 0 100px 0;
-  height: 800px;
 }
 
 @media screen and (max-width: 767px) {
@@ -36,6 +35,7 @@ div, p, img {
   .main-container {
     background: -webkit-gradient(linear, left top, left bottom, from(#bebebef8), to(#bebebef8)) no-repeat center/2px 90%;
     background: linear-gradient(#bebebef8, #bebebef8) no-repeat center/2px 90%;
+    height: 800px;
   }
 }
 
@@ -57,53 +57,53 @@ div, p, img {
   }
 }
 
-.left {
+.odd {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.left .card-text {
+.odd .card-text {
   text-align: right;
 }
 
-.left .card-date {
+.odd .card-date {
   right: 15px;
 }
 
-.left .card-line-circle {
+.odd .card-line-circle {
   right: -10px;
 }
 
 @media screen and (min-width: 768px) {
-  .left {
+  .odd {
     float: left;
     margin-left: 10%;
   }
 }
 
-.right {
+.even {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.right .card-text {
+.even .card-text {
   text-align: left;
 }
 
-.right .card-date {
+.even .card-date {
   left: 15px;
 }
 
-.right .card-line-circle {
+.even .card-line-circle {
   left: -10px;
 }
 
 @media screen and (min-width: 768px) {
-  .right {
+  .even {
     float: right;
     margin-right: 10%;
   }
@@ -188,7 +188,7 @@ div, p, img {
 
 /* this is to be solved in PHP */
 @media screen and (min-width: 768px) {
-  #first-right {
+  #first-even {
     margin-top: 200px;
   }
 }
