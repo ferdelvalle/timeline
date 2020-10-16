@@ -39,6 +39,14 @@ div, p, img {
   }
 }
 
+.timeline-title {
+  text-align: center;
+  font-size: 45px;
+  color: #0ac6e9;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
 .card {
   margin-top: 50px;
   display: -webkit-box;

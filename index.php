@@ -41,15 +41,14 @@
   ';
 	}
 	
-	function timeline($timeline_data){
-    echo '<div class="main-container">' . "\n";
+	function timeline($timeline_data, $holidayName){
+    $timeline_title= $holidayName . ' timeline';
+    echo '
+    <p class="timeline-title">' . $timeline_title . '</p>
+    <div class="main-container">
+    ';
     for ($i = 0; $i <= 3; $i++){
-			$index = $timeline_data[$i][0];
-			$text_title = $timeline_data[$i][1];
-			$text_body = $timeline_data[$i][2];
-			$text_image_src = $timeline_data[$i][3];
-			$text_date = $timeline_data[$i][4];
-      $item = timeline_item($index, $text_title, $text_body, $text_image_src, $text_date);
+      $item = timeline_item($timeline_data[$i][0], $timeline_data[$i][1], $timeline_data[$i][2], $timeline_data[$i][3], $timeline_data[$i][4]);
       echo $item;
     }
     echo '</div>' . "\n";
@@ -73,6 +72,6 @@
   <title>Timeline</title>
 </head>
 <body>
-  <?php timeline($timeline_data) ?>
+  <?php timeline($timeline_data, "taco") ?>
 </body>
 </html>
