@@ -30,7 +30,7 @@
     </div>
 
     <div id="first-right" class="card right">
-      <a href="" class="card-border">
+      <div href="" class="card-border">
         <div class="card-date">
           <p class="card-date-text">September 2020</p>
         </div>
@@ -43,7 +43,7 @@
           </p>
           <img src="./assets/sample.png" alt="" class="card-text-image">
         </div>
-      </a>
+      </div>
       <div class="card-line-container">
         <div class="card-line">
           <div class="card-line-circle"></div>
@@ -111,6 +111,7 @@
       $text_image_path = "";
       $text_image_name = "";
       $text_image_source = "";
+      $article_link
 
     pseudo-code de la función
 
@@ -119,7 +120,7 @@
       $ending_id = $starting_id + $num_of_posts - 1;
       for($count = $starting_id; $count =< $ending_id; $count++){
 
-          if($starting_id % 2 !== 0){
+        if($starting_id % 2 !== 0){
           $side = "left;"
         } elseif($starting_id === 2){
           $first_right = "id=\"first-right"";
@@ -130,7 +131,7 @@
 
         echo "
               <div $first_right class=\"card $side\">
-        <a href=\"$article_link" class=\"card-border\">
+        <div href=\"$article_link" class=\"card-border\">
           <div class=\"card-date\">
             <p class=\"card-date-text\">$text_date</p>
           </div>
@@ -143,7 +144,7 @@
             </p>
             $image
           </div>
-        </a>
+        </div>
         <div class=\"card-line-container\">
           <div class=\"card-line\">
             <div class=\"card-line-circle\"></div>
@@ -155,7 +156,5 @@
 
       $starting_id++;
   }
-
-
 
 -->
